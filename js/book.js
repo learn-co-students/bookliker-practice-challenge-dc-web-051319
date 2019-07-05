@@ -25,6 +25,18 @@ class Book {
         return Book.all.find( book => book.id == bookId);
     }
 
+    like() {
+        console.log(this);
+        if (!this.users.includes(CURRENT_USER)) {
+            console.log(this.users)
+            this.users.push(CURRENT_USER);
+            console.log(this.users)
+            //Adapter.update(BOOKS_URL, this.id, this.users);
+        } else {
+            window.alert("You already like this book!");
+        }
+    }
+
 }
 
 Book.all = [];
