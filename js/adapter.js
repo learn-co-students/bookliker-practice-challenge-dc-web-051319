@@ -17,10 +17,11 @@ class Adapter {
             body: JSON.stringify(data)
         };
         
-        fetch(`${url}/${id}`, configObject)
+        return fetch(`${url}/${id}`, configObject)
             .then(response => response.json())
             .then(object => {
-                window.alert(`Success. Updated ${object}`);
+                window.alert(`Success! ${object.title} updated.`);
+                return object;
             })
             .catch(error => {
                 window.alert(error.message);

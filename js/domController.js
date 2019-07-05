@@ -13,8 +13,15 @@ class DOMController {
 
     static likeHandler(event) {
         let bookId = event.target.parentElement.dataset["bookId"];
-        let book = Book.all.find((book) => book.id = bookId);
-        book.like();
+        let book = Book.all.find((book) => book.id == bookId);
+        console.log("Users:", book.users);
+        book.like()
+            .then((book) => {
+                let usersList = document.querySelector("#users-list");
+                let newUser = document.createElement("li");
+                newUser.innerText = book.users.slice(-1)[0].username;
+                usersList.appendChild(newUser);
+            });
     }
 
     static renderList(books){
@@ -45,13 +52,14 @@ class DOMController {
         description.innerText = book.description;
         panel.appendChild(description);
 
-        let users = document.createElement("ul");
+        let usersList = document.createElement("ul");
+        usersList.id = "users-list"
         book.users.forEach(user => {
             let userListItem = document.createElement("li");
             userListItem.innerText = user.username;
-            users.appendChild(userListItem);    
+            usersList.appendChild(userListItem);    
         });
-        panel.appendChild(users);
+        panel.appendChild(usersList);
 
         let likeButton = document.createElement("button");
         likeButton.innerText = "Like This Book";

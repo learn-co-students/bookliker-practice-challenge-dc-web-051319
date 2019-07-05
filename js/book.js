@@ -26,12 +26,10 @@ class Book {
     }
 
     like() {
-        console.log(this);
         if (!this.users.includes(CURRENT_USER)) {
-            console.log(this.users)
             this.users.push(CURRENT_USER);
-            console.log(this.users)
-            //Adapter.update(BOOKS_URL, this.id, this.users);
+            console.log("Updated Users:", this.users)
+            return Adapter.update(BOOKS_URL, this.id, {users: this.users});
         } else {
             window.alert("You already like this book!");
         }
