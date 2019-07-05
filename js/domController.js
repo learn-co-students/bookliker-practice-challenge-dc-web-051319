@@ -14,7 +14,6 @@ class DOMController {
     static likeHandler(event) {
         let bookId = event.target.parentElement.dataset["bookId"];
         let book = Book.all.find((book) => book.id == bookId);
-        console.log("Users:", book.users);
         book.like()
             .then(book => {
                 let usersList = document.querySelector("#users-list");
