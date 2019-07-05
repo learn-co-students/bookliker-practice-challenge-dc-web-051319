@@ -20,7 +20,7 @@ class Adapter {
         return fetch(`${url}/${id}`, configObject)
             .then(response => response.json())
             .then(object => {
-                window.alert(`Success! ${object.title} updated.`);
+                window.alert(`Success!`);
                 return object;
             })
             .catch(error => {

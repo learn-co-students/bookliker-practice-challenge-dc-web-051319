@@ -26,12 +26,13 @@ class Book {
     }
 
     like() {
-        if (!this.users.includes(CURRENT_USER)) {
+        if (!this.users.some(user => user.id == CURRENT_USER.id)) {
             this.users.push(CURRENT_USER);
             console.log("Updated Users:", this.users)
             return Adapter.update(BOOKS_URL, this.id, {users: this.users});
         } else {
-            window.alert("You already like this book!");
+            return Promise.reject(new Error("You already like this book!"))
+            //throw new Error("You already like this book!"); doesn't return the error
         }
     }
 

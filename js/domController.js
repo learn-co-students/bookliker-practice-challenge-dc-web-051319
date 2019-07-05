@@ -16,11 +16,14 @@ class DOMController {
         let book = Book.all.find((book) => book.id == bookId);
         console.log("Users:", book.users);
         book.like()
-            .then((book) => {
+            .then(book => {
                 let usersList = document.querySelector("#users-list");
                 let newUser = document.createElement("li");
                 newUser.innerText = book.users.slice(-1)[0].username;
                 usersList.appendChild(newUser);
+            })
+            .catch(error => {
+                window.alert(error.message);
             });
     }
 
