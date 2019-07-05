@@ -41,16 +41,14 @@ function showBook(book) {
 
 function addUser(book) {
     let me = { "id": 1, "username": "pouros" }
-    let array = []
-    book.users.forEach(user => array.push(user))
 
-    if (array.find(li => li.id === me.id)) {
+    if (book.users.find(user => user.id === me.id)) {
         alert("You read this already!")
     } else {
-        array.push(me)
+        book.users.push(me)
 
         let updatedUsers = {
-            'users': array
+            'users': book.users
         }
         fetch(`${booksUrl}/${book.id}`, {
             method: 'PATCH',
@@ -60,16 +58,14 @@ function addUser(book) {
             },
             body: JSON.stringify(updatedUsers)
         })
-        .then(response => response.json())
-        .then(data => showBook(data))
+            .then(response => response.json())
+            .then(data => showBook(data))
     }
 }
 
 function getUsers(user) {
     let li = document.createElement('li')
-    li.id = user.id
     li.innerText = user.username
-
     getDiv().appendChild(li)
 }
 
