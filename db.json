@@ -1,6 +1,18 @@
 {
   "books": [
     {
+      "0": {
+        "id": 2,
+        "username": "auer"
+      },
+      "1": {
+        "id": 8,
+        "username": "goodwin"
+      },
+      "2": {
+        "id": 1,
+        "username": "pouros"
+      },
       "id": 1,
       "title": "Picture Perfect",
       "description": "When her seven-year-old nephew, a hemophiliac, mysteriously disappears during their camping trip, pediatrician Lorrie Ryan races against time to find the missing boy with the help of FBI agent Stuart Saunders. Previously published as Panda Bear Is Critical. Reprint.",
@@ -13,6 +25,10 @@
         {
           "id": 8,
           "username": "goodwin"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -33,6 +49,10 @@
         {
           "id": 6,
           "username": "steuber"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -49,6 +69,10 @@
         {
           "id": 9,
           "username": "nikolaus"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -65,6 +89,10 @@
         {
           "id": 8,
           "username": "goodwin"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -85,6 +113,10 @@
         {
           "id": 8,
           "username": "goodwin"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -117,6 +149,10 @@
         {
           "id": 5,
           "username": "king"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -157,10 +193,30 @@
         {
           "id": 5,
           "username": "king"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
     {
+      "0": {
+        "id": 8,
+        "username": "goodwin"
+      },
+      "1": {
+        "id": 6,
+        "username": "steuber"
+      },
+      "2": {
+        "id": 5,
+        "username": "king"
+      },
+      "3": {
+        "id": 1,
+        "username": "pouros"
+      },
       "id": 10,
       "title": "The Lottery Winner",
       "description": "Five short tales, including 'Plumbing for Willy' and 'Death on the Cape,' follow the adventures of a former cleaning woman and her occasionally befuddled mate",
@@ -171,8 +227,16 @@
           "username": "goodwin"
         },
         {
-          "id": 10,
-          "username": "macejkovic"
+          "id": 6,
+          "username": "steuber"
+        },
+        {
+          "id": 5,
+          "username": "king"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     }
